@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style2.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='queries/queries.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='queries/queries2.css')}}"
+    />
+  </head>
+  <body>
+    <section class="section-nav">
+      <nav class="nav-bar align-items-center row">
+        <div class="nav-left col-3">
+          <img alt="menu" class="menu-icon" src="/static/images/menu.png" />
+          <img alt="youtube-icon" class="logo" src="/static/images/logo.png" />
+        </div>
+        <div class="nav-middle text-center col-6">
+          <input type="text" placeholder="Search" id="search" />
+          <img
+            alt="search"
+            class="search-icon"
+            src="/static/images/search.png"
+          />
+          <img alt="mic" class="mic-icon" src="/static/images/mic.png" />
+        </div>
+        <div class="nav-right col-3">
+          <img
+            alt="video-upload"
+            class="upload-icon"
+            src="/static/images/upload.png"
+          />
+          <img
+            alt="video-upload"
+            class="more-icon"
+            src="/static/images/more.png"
+          />
+          <img
+            alt="notification-bell"
+            class="bell-icon"
+            src="/static/images/bell.png"
+          />
+          <img
+            alt="profile-picture"
+            class="profile"
+            src="/static/images/profile.png"
+          />
+        </div>
+      </nav>
+    </section>
+    <section class="content-flex">
+      <section class="section-video">
+        <div class="content-1">
+          <!-- <video class="video" controls>
+            <source src="https://youtu.be/hPzBb9ebp7g?si=7lTpxGcJZHMWB558" />
+          </video> -->
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/{{d.videoID}}"
+            allowfullscreen
+          ></iframe>
+
+          <div class="tags">
+            <p>#coding</p>
+            <p>#Javascript</p>
+            <p>#Fullstack</p>
+            <p>#Frontend</p>
+            <p>#html</p>
+            <p>#css</p>
+          </div>
+        </div>
+        <div class="content-2">
+          <h2>Fullstack Web Development - Youtube UI clone</h2>
+          <div class="flex like-width">
+            <p class="views">1M views &bull; 2days</p>
+            <div class="like">
+              <img src="/static/images/like.png" />
+              <p>55k</p>
+              <img class="dislike" src="/static/images/dislike.png" />
+              <img src="/static/images/share.png" />
+              <p>30K</p>
+              <img class="save-icon" src="/static/images/save.png" />
+              <p>Save</p>
+            </div>
+          </div>
+          <hr />
+          <div class="c-name">
+            <div>
+              <div class="flex-2">
+                <img src="/static/images/profile.png" />
+                <div>
+                  <h3>Happy Students</h3>
+                  <p class="subs">800k subscribers</p>
+                </div>
+              </div>
+              <p>
+                This is a channel focused on building Tech videos.This is to
+                help Learners to learn stuff easily
+              </p>
+            </div>
+            <button>Subcribe</button>
+          </div>
+          <hr />
+          <p class="comments">100 comments</p>
+          <div class="write-comment">
+            <img src="/static/images/profile.png" />
+            <div class="w-c">
+              <p>write comment</p>
+              <hr />
+            </div>
+          </div>
+          <div class="comments-container">
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-1.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-2.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-4.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-5.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-6.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-1.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="flex-4">
+                <img src="/static/images/person-2.jpeg" />
+                <div>
+                  <div class="flex-3">
+                    <p class="name">John</p>
+                    <p class="days-ago">3 days ago</p>
+                  </div>
+                  <p class="cm-p">
+                    This is a fullstack Development course. Here we are learning
+                    the projects with help of developing the clone of other
+                    websites.
+                  </p>
+                  <div class="flex-3">
+                    <img src="/static/images/like.png" />
+                    <p class="no_of_likes">300</p>
+                    <img src="/static/images/dislike.png" />
+                    <p>Reply</p>
+                    <p class="allreplies">All replies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-recommend">
+        {%for i in thumbnailList%}
+        <div class="vid-list">
+          <a href="{{url_for('play',id=i.videoID)}}">
+            <img src="/static/images/{{i.thumbnail}}" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="{{url_for('play',id=i.videoID)}}" class="description"
+                  ><p class="desc">{{i.description}}</p>
+                </a>
+
+                <p class="channel">{{i.channel}}</p>
+                <p class="views">{{i.views}} &bull; {{i.uploaded}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+        <!-- <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-2.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-3.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-4.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-5.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-6.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-7.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vid-list">
+          <a href="#">
+            <img src="/static/images/thumbnail-8.jpg" class="thumbnail" />
+          </a>
+
+          <div>
+            <div class="flex">
+              <div>
+                <a href="#" class="description"
+                  ><p class="desc">
+                    This is a video mainly focused on Frontend Development.It is
+                    created for absolute beginners.
+                  </p>
+                </a>
+
+                <p class="channel">Happy Students</p>
+                <p class="views">1M views &bull; 2days</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </section>
+  </body>
+  <script src="/static/script/script.js"></script>
+  <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</html>
